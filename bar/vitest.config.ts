@@ -7,6 +7,6 @@ export default defineConfig({
     environment: "jsdom",
     globals: true,
     transformMode: { web: [/.[jt]sx?$/] },
-    deps: { registerNodeLoader: true },
+    deps: { registerNodeLoader: true, inline: ["**/foo/**"] },
   },
 });
