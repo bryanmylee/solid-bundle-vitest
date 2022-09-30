@@ -1,0 +1,36 @@
+{
+  "name": "foo",
+  "version": "1.0.0",
+  "scripts": {
+    "example": "vite",
+    "build": "rollup --config rollup.config.js",
+    "clean": "rimraf dist",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "coverage": "vitest run --coverage"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/cjs/main.js",
+  "module": "./dist/esm/main.js",
+  "types": "./dist/types/main.d.ts",
+  "exports": {
+    ".": {
+      "solid": "./dist/source/main.js",
+      "import": "./dist/esm/main.js",
+      "require": "./dist/cjs/main.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "sideEffects": false,
+  "peerDependencies": {
+    "solid-js": ">=1"
+  },
+  "devDependencies": {
+    "jsdom": "^20.0.0"
+  }
+}
