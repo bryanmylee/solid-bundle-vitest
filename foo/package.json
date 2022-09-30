@@ -15,14 +15,16 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/cjs/main.js",
-  "module": "./dist/esm/main.js",
-  "types": "./dist/types/main.d.ts",
+  "main": "dist/cjs/main.js",
+  "module": "dist/esm/main.js",
+  "types": "dist/types/main.d.ts",
   "exports": {
     ".": {
-      "solid": "./dist/source/main.js",
+      "solid": "./dist/source/main.jsx",
       "import": "./dist/esm/main.js",
-      "require": "./dist/cjs/main.js"
+      "require": "./dist/cjs/main.js",
+      "browser": "./dist/esm/main.js",
+      "node": "./dist/cjs/main.js"
     },
     "./package.json": "./package.json"
   },
